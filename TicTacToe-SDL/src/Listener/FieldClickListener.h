@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "../Event/EventListener.h"
 #include "../Field.h"
-#include <Windows.h>
 #include "../Gameplay/GameplayManager.h"
 #include <array>
 
