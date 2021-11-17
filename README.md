@@ -9,7 +9,7 @@ This is just a project to learn a bit.
 
 # Installation
 
-Download the latest release from the [Releases tab](https://github.com/sorpdev/LayeredWindowTest/releases) on GitHub
+Download the latest release from the [Releases tab](https://github.com/sorpdev/TicTacToe-SDL/releases) on GitHub
 
 # Libraries
 - [SDL2](https://www.libsdl.org/download-2.0.php)
