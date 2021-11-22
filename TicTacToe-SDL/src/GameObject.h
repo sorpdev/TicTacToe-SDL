@@ -9,7 +9,7 @@ public:
 	float W = 0;
 	float H = 0;
 	SDL_Texture* Texture;
-	GameObject* Child;
+	GameObject* Child = nullptr;
 
 	GameObject(SDL_Texture* texture, const float x, const float y, const float w, const float h)
 	{
