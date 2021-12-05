@@ -1,6 +1,6 @@
 ﻿#include "GameplayManager.h"
 
-void GameplayManager::CreatePlayfield()
+void GameplayManager::CreatePlayField()
 {
 	for (int row = 0; row < 3; row++)
 	{
@@ -121,18 +121,11 @@ void GameplayManager::MakeMove(const int row, const int col)
 
 		//Check win conditions
 		std::array<Field*, 3> winFields{};
-		Player winner = m_CheckWinConditions(winFields);
+		const Player winner = m_CheckWinConditions(winFields);
 		if (winner != Player::None)
 		{
 			Winner = winner;
-
-			for (int i = 0; i < winFields.size(); i++)
-			{
-				const Field* winField = winFields[i];
-			}
-
 			CurrentPlayer = Player::None;
-
 			return;
 		}
 		//Check draw
@@ -148,12 +141,31 @@ void GameplayManager::MakeMove(const int row, const int col)
 	}
 }
 
+void GameplayManager::RestartGame()
+{
+	//Reset fields
+	for (const auto& m_Field : m_Fields)
+	{
+		for (const auto& field : m_Field)
+		{
+			field->FieldOwner = Player::None;
+			delete field->GetGameObject()->Child;
+			field->GetGameObject()->Child = nullptr;
+		}
+	}
+
+	//Reset winner
+	Winner = Player::None;
+
+	CurrentPlayer = Player::X;
+}
+
 void GameplayManager::Destroy()
 {
 	//Delete fields
 	for (const auto& m_Field : m_Fields)
 	{
-		for (const auto field : m_Field)
+		for (const auto& field : m_Field)
 		{
 			delete field;
 		}

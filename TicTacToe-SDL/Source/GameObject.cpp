@@ -2,7 +2,7 @@
 
 void GameObject::Update()
 {
-}
+};
 
 
 void GameObject::Render(SDL_Renderer* renderer) const

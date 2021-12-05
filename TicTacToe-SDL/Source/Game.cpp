@@ -14,7 +14,6 @@ Game::Game(const char* title, const int x, const int y, const int w, const int h
 				if (m_Renderer)
 				{
 					m_Running = true;
-
 					Init();
 				}
 			}
@@ -45,19 +44,8 @@ void Game::Init()
 
 void Game::Loop()
 {
-	Time::Now = 0;
-	Time::Last = SDL_GetTicks();
-	Time::DeltaTime = 0;
-
 	while (m_Running)
 	{
-		Time::Now = SDL_GetTicks();
-		Time::DeltaTime = static_cast<float>(Time::Now - Time::Last) / 1000;
-		Time::Last = Time::Now;
-
-		if (Time::DeltaTime > 1.5f)
-			Time::DeltaTime = 1.5f;
-
 		EventHandler::HandleEvents(&m_Running);
 		Update();
 		Draw();
@@ -98,6 +86,7 @@ Game::~Game()
 {
 	//Destroy scene
 	m_Scene.Destroy();
+
 	//Destroy SDL stuff
 	SDL_DestroyWindow(m_Window);
 	SDL_DestroyRenderer(m_Renderer);

@@ -8,10 +8,10 @@ class FieldClickListener : public EventListener
 {
 private:
 	GameplayManager* m_GameplayManager;
+	uint32_t m_Cooldown;
 public:
-	FieldClickListener(GameplayManager* gameplayManager)
+	FieldClickListener(GameplayManager* gameplayManager) : m_GameplayManager(gameplayManager)
 	{
-		m_GameplayManager = gameplayManager;
 	}
 
 	void OnEvent(SDL_Event* event) override;

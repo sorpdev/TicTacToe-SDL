@@ -15,7 +15,7 @@ void Scene::Init()
 	EventHandler::AddListener(SDL_MOUSEBUTTONDOWN, &fieldClickListener);
 
 	//Create fields
-	m_GamePlayManager.CreatePlayfield();
+	m_GamePlayManager.CreatePlayField();
 }
 
 
@@ -45,22 +45,22 @@ void Scene::Render(SDL_Renderer* renderer) const
 
 	if (m_GamePlayManager.Winner == Player::X)
 	{
-		FontRenderer::RenderFont(renderer, "X is the winner!", 570, 150);
+		FontRenderer::RenderFont(renderer, "X is the winner! Click to restart", 470, 150);
 	}
 	else if (m_GamePlayManager.Winner == Player::O)
 	{
-		FontRenderer::RenderFont(renderer, "O is the winner!", 570, 150);
+		FontRenderer::RenderFont(renderer, "O is the winner! Click to restart", 470, 150);
 	}
 	else if (m_GamePlayManager.CurrentPlayer == Player::None)
 	{
-		FontRenderer::RenderFont(renderer, "Draw! No winner!", 570, 150);
+		FontRenderer::RenderFont(renderer, "Draw! No winner! Click to restart", 470, 150);
 	}
 
 	//Render fields
 	const auto fields = m_GamePlayManager.GetFields();
 	for (const auto& _field : fields)
 	{
-		for (const auto field : _field)
+		for (const auto& field : _field)
 		{
 			field->GetGameObject()->Render(renderer);
 		}

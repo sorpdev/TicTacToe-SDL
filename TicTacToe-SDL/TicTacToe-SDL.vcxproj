@@ -77,9 +77,9 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(ProjectDir)*.dll $(OutDir)
-xcopy /y $(ProjectDir)assets\*.png $(OutDir)assets\
-xcopy /y $(ProjectDir)assets\*.ttf $(OutDir)assets\
+      <Command>xcopy /y $(ProjectDir)Libraries\*.dll $(OutDir)
+xcopy /y $(ProjectDir)Assets\*.png $(OutDir)assets\
+xcopy /y $(ProjectDir)Assets\*.ttf $(OutDir)assets\
 xcopy /y $(ProjectDir)*.ico $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -105,38 +105,36 @@ xcopy /y $(ProjectDir)*.ico $(OutDir)</Command>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(ProjectDir)*.dll $(OutDir)
-xcopy /y $(ProjectDir)assets\*.png $(OutDir)assets\
-xcopy /y $(ProjectDir)assets\*.ttf $(OutDir)assets\
+      <Command>xcopy /y $(ProjectDir)Libraries\*.dll $(OutDir)
+xcopy /y $(ProjectDir)Assets\*.png $(OutDir)assets\
+xcopy /y $(ProjectDir)Assets\*.ttf $(OutDir)assets\
 xcopy /y $(ProjectDir)*.ico $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Event\EventHandler.cpp" />
-    <ClCompile Include="src\FontRenderer.cpp" />
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\GameObject.cpp" />
-    <ClCompile Include="src\Gameplay\GameplayManager.cpp" />
-    <ClCompile Include="src\Listener\FieldClickListener.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Scene.cpp" />
-    <ClCompile Include="src\TextureManager.cpp" />
-    <ClCompile Include="src\Time.cpp" />
+    <ClCompile Include="Source\Event\EventHandler.cpp" />
+    <ClCompile Include="Source\FontRenderer.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\GameObject.cpp" />
+    <ClCompile Include="Source\Gameplay\GameplayManager.cpp" />
+    <ClCompile Include="Source\Listener\FieldClickListener.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Scene.cpp" />
+    <ClCompile Include="Source\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="src\Event\EventHandler.h" />
-    <ClInclude Include="src\Event\EventListener.h" />
-    <ClInclude Include="src\Field.h" />
-    <ClInclude Include="src\FontRenderer.h" />
-    <ClInclude Include="src\Game.h" />
-    <ClInclude Include="src\GameObject.h" />
-    <ClInclude Include="src\Gameplay\GameplayManager.h" />
-    <ClInclude Include="src\Listener\FieldClickListener.h" />
-    <ClInclude Include="src\Player.h" />
-    <ClInclude Include="src\Scene.h" />
-    <ClInclude Include="src\TextureManager.h" />
-    <ClInclude Include="src\Time.h" />
+    <ClInclude Include="Source\Event\EventHandler.h" />
+    <ClInclude Include="Source\Event\EventListener.h" />
+    <ClInclude Include="Source\Field.h" />
+    <ClInclude Include="Source\FontRenderer.h" />
+    <ClInclude Include="Source\Game.h" />
+    <ClInclude Include="Source\GameObject.h" />
+    <ClInclude Include="Source\Gameplay\GameplayManager.h" />
+    <ClInclude Include="Source\Listener\FieldClickListener.h" />
+    <ClInclude Include="Source\Player.h" />
+    <ClInclude Include="Source\Scene.h" />
+    <ClInclude Include="Source\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TicTacToe-SDL.rc" />

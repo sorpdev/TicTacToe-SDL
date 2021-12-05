@@ -15,9 +15,10 @@ public:
 	Player CurrentPlayer = Player::X; //Set X as starting player
 	Player Winner = Player::None;
 
-	void CreatePlayfield();
+	void CreatePlayField();
 	void MakeMove(int row, int col);
 	void Destroy();
+	void RestartGame();
 
 	std::array<std::array<Field*, 3>, 3> GetFields() const { return m_Fields; };
 };
