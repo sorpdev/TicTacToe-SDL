@@ -22,7 +22,7 @@ void FieldClickListener::OnEvent(SDL_Event* event)
 			{
 				m_GameplayManager->MakeMove(field->Row, field->Col);
 				//Check if click triggered a win
-				if (m_GameplayManager->Winner != Player::None)
+				if (m_GameplayManager->CurrentPlayer == Player::None)
 				{
 					m_Cooldown = SDL_GetTicks() + 250;
 				}
