@@ -34,5 +34,5 @@ public:
 		Child = child;
 	}
 
-	bool IsInBounds(int x, int y) const;
+	bool IsInBounds(const int& x, const int& y) const;
 };

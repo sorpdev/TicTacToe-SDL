@@ -18,7 +18,7 @@ void EventHandler::HandleEvents(bool* gameRunning)
 }
 
 
-void EventHandler::ProcessEvent(SDL_Event* event, SDL_EventType eventType)
+void EventHandler::ProcessEvent(SDL_Event* event, SDL_EventType&& eventType)
 {
 	if (!listeners.empty())
 	{
@@ -33,7 +33,7 @@ void EventHandler::ProcessEvent(SDL_Event* event, SDL_EventType eventType)
 	}
 }
 
-void EventHandler::AddListener(SDL_EventType eventType, EventListener* listener)
+void EventHandler::AddListener(SDL_EventType&& eventType, EventListener* listener)
 {
 	listeners.insert(std::pair<EventListener*, SDL_EventType>{listener, eventType});
 }

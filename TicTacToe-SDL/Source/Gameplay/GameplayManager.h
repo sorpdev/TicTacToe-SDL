@@ -16,7 +16,7 @@ public:
 	Player Winner = Player::None;
 
 	void CreatePlayField();
-	void MakeMove(int row, int col);
+	void MakeMove(const int& row, const int& col);
 	void Destroy();
 	void RestartGame();
 

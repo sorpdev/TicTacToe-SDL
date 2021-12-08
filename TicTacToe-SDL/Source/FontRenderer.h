@@ -11,5 +11,5 @@ class FontRenderer
 {
 public:
 	static void LoadFont(const char* file, int size);
-	static void RenderFont(SDL_Renderer* renderer, const char* text, int x, int y);
+	static void RenderFont(SDL_Renderer* renderer, const char* text, const int&& x, const int&& y);
 };

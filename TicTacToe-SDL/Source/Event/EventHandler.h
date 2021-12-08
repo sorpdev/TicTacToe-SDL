@@ -8,8 +8,8 @@ class EventHandler
 {
 private:
 	//static std::map<SDL_EventType, void*> Listeners;
-	static void ProcessEvent(SDL_Event*, SDL_EventType);
+	static void ProcessEvent(SDL_Event*, SDL_EventType&&);
 public:
 	static void HandleEvents(bool* gameRunning);
-	static void AddListener(SDL_EventType, EventListener*);
+	static void AddListener(SDL_EventType&&, EventListener*);
 };

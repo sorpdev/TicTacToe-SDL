@@ -96,7 +96,7 @@ bool GameplayManager::m_CheckDraw()
 	return draw;
 }
 
-void GameplayManager::MakeMove(const int row, const int col)
+void GameplayManager::MakeMove(const int& row, const int& col)
 {
 	if (CurrentPlayer == Player::None) return;
 	auto field = m_Fields[row][col];
