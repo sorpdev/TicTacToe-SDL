@@ -12,6 +12,6 @@ This is just a project to learn a bit.
 Download the latest release from the [Releases tab](https://github.com/sorpdev/TicTacToe-SDL/releases) on GitHub
 
 # Libraries
-- [SDL2](https://www.libsdl.org/download-2.0.php)
-- [SDL2_image](https://www.libsdl.org/projects/SDL_image/)
-- [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/)
+- [SDL2](https://github.com/libsdl-org/SDL)
+- [SDL2_image](https://github.com/libsdl-org/SDL_image)
+- [SDL2_ttf](https://github.com/libsdl-org/SDL_ttf)
